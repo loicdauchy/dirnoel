@@ -386,3 +386,26 @@ footer{
     flex-direction: column;
 }
 
+#carouselIndicators{
+    min-height: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+div.carousel-item.article img{
+    height: 100%;
+}
+
+@media (max-width: 767px){
+    .reverse{
+        flex-direction: column !important;
+    }
+    div#carouselIndicators{
+        min-height: 40%;
+        margin-bottom: 25px;
+    }
+    div.carousel-item.article img{
+        height: 40%;
+    }
+    
+}
+
