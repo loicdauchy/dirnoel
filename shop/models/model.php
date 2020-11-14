@@ -4,7 +4,7 @@ function affichercategories(){
     $sql = 'SELECT * FROM `categories` WHERE age_categories = '.$_GET['idcate'];
     $query = $db->prepare($sql);
     $query->execute();
-    $categories = $query->fetch(PDO::FETCH_ASSOC);
+    $categories = $query->fetchALL(PDO::FETCH_ASSOC);
     return $categories;
 }
 
@@ -13,7 +13,7 @@ function afficherArticle(){
     $sql = 'SELECT * FROM `article` WHERE categories_article = '.$_GET['ida'];
     $query = $db->prepare($sql);
     $query->execute();
-    $article = $query->fetch(PDO::FETCH_ASSOC);
+    $article = $query->fetchALL(PDO::FETCH_ASSOC);
     return $article;
 }
 
