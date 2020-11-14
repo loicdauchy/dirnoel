@@ -70,7 +70,7 @@ if(isset($_POST['mailform'])) {
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="shop.html">Shop</a>
+                  <a class="nav-link" href="shop/shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
@@ -127,7 +127,7 @@ if(isset($_POST['mailform'])) {
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item no">
-                <a class="nav-link" href="shop.html">Shop</a>
+                <a class="nav-link" href="shop/shop.php">Shop</a>
               </li>
               <li class="nav-item no">
                   <a class="nav-link" href="about.html">About</a>

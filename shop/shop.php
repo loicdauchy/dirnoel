@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <title>Shop - Direction Noël</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -26,7 +26,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#"><img class="logo" src="assets/img/logo3.png" alt="Logo du site"></a>
+            <a class="navbar-brand" href="#"><img class="logo" src="../assets/img/logo3.png" alt="Logo du site"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,40 +34,36 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="shop.html">Shop</a>
+                  <a class="nav-link" href="shop.php">Shop</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="../about.html">About</a>
                 </li>
                 <li class="nav-item bouge">
-                  <a class="nav-link" href="contact.php">Contact</a>
+                  <a class="nav-link" href="../contact.php">Contact</a>
               </li>
                        
               </ul>            
             </div>
           </nav>
     </header>
-    <section id="categoriesShop">
-        <div class="container-fluid cate">
-          <div class="row cate">
-            <div class="col-12">
-              <h2><span>S</span>hop <span>C</span>atégories</h2>
-            </div>
-            <div class="col-12 col-md-4 cate centre">
-              <a href="shop/age1.php"><button class="btn btncate"><img src="assets/img/toys1.png" alt=""><h3>De 1 à 6 ans</h3></button></a>
-            </div>
-            <div class="col-12 col-md-4 cate centre">
-              <a href="shop/age2.php"><button class="btn btncate"><img src="assets/img/toys2.png" alt=""><h3>De 6 à 10 ans</h3></button></a>
-            </div>
-            <div class="col-12 col-md-4 cate centre">
-              <a href="shop/age3.php"><button class="btn btncate"><img src="assets/img/toys3.png" alt=""><h3>De 10 à 16 ans</h3></button></a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <?php
+    require('controllers/controller.php');
+
+      if (isset($_GET['idcate'])) {
+            echo categories();
+          }else if(isset($_GET['ida'])){  
+                  echo article();
+              }else if(isset($_GET['id'])){
+                    echo detail();
+              }else{
+                      echo btncate();
+              }
+
+    ?>
     <footer>
         <div class="container-fluid foot">
           <div class="row foot">
@@ -79,16 +75,16 @@
             <div class="col-12 centre haut">
               <ul class="centre">
                 <li class="nav-item no">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item no">
-                  <a class="nav-link" href="shop.html">Shop</a>
+                  <a class="nav-link" href="shop.php">Shop</a>
                 </li>
                 <li class="nav-item no">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="../about.html">About</a>
                 </li>
                 <li class="nav-item no">
-                  <a class="nav-link" href="contact.php">Contact</a>
+                  <a class="nav-link" href="../contact.php">Contact</a>
                 </li>                    
               </ul>                        
             </div>
